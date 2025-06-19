@@ -6,6 +6,89 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "x",
+						"type": "address"
+					}
+				],
+				"name": "addressTypes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "a",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ads",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "counts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "account",
+						"type": "uint256"
+					}
+				],
+				"name": "numbertype",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "sayHello",
 				"outputs": [
@@ -16,6 +99,53 @@
 					}
 				],
 				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					}
+				],
+				"name": "taker",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -34,7 +164,7 @@
 		"compilationTarget": {
 			"hello.sol": "Hello"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -47,11 +177,11 @@
 	},
 	"sources": {
 		"hello.sol": {
-			"keccak256": "0xee063cbd0be1736ad9d3608e4c20bcf00fe8d8f03348b39584543bf5d5395e05",
+			"keccak256": "0x1d3de7fd3f8f7b3ce2ccc663687ff5b1ab7f63c71d4472f956acd45f9a3a9b0e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://30d55138febadd66308b05dae7a581792cb072ac840d007953185e74ff6800e0",
-				"dweb:/ipfs/QmZeq71q3GTRuEhCQtQbKVdCP1uZdYXbJbpU3LeuanZSde"
+				"bzz-raw://213c89acfa7add51cb07476fc51d8973e8c00ad462674395c2c5b80e56c542c5",
+				"dweb:/ipfs/QmQuarGVoNfowiNDVQQrArUL3H3x6q7TWX1rsSjZ77uKvg"
 			]
 		}
 	},
