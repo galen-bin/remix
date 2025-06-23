@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "willRevert",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"errorhandle.sol": "ExternalContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"errorhandle.sol": {
+			"keccak256": "0xd3e3f071f8b14199025750feba1049036e645c9fd8c106471091f6179b2f4b26",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://628dac21c62dde77e7f0634db90f0d448887707ead550d6f4b2b2a3455753c5f",
+				"dweb:/ipfs/Qmb1YVLKmRA5qoFXnwXEJXiFAyJSGr1xvx6mjWvD3cScUR"
+			]
+		}
+	},
+	"version": 1
+}
