@@ -7,14 +7,15 @@ contract Hello{
      address public  ads=msg.sender;
      mapping (address=>uint256) public  balances;
      mapping(string=>uint) public  counts;
-     struct user  {
+     
+
+       mapping (address=>user) public users ;
+       struct user  {
          string name;
           uint256 age;
           address wallet;
      
        }
-
-       mapping (address=>user) public users ;
      
     function sayHello() public pure  returns(string memory){
         return "hello, world";
