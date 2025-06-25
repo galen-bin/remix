@@ -7,7 +7,26 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "get",
+				"name": "getValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "setValue",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -26,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"extends02.sol": "B"
+			"extends02.sol": "Name"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -41,11 +60,11 @@
 	},
 	"sources": {
 		"extends02.sol": {
-			"keccak256": "0x768414f7d6b553b79232e4cb97c250fcdb0e8df555f84be51b9488d2b8e0ebd8",
+			"keccak256": "0x7b9a7cb38594e72c76e9d23f4f620cedc18f8c79e4933993cb86501ff63efd3e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://34e650770387d2beeb12fbb034166aa2da649e298db5ba91a9faf7df3c5e8899",
-				"dweb:/ipfs/QmTmkyjQoqN9skGjTTWg7LSt3E8kJx4o2uM737k1EqdcDJ"
+				"bzz-raw://b4da8c0949e0e87ba22f2d61d1eef635574f3ae12a9dabaeb058f3ae0f3c93e5",
+				"dweb:/ipfs/QmWLJwz1DWYjMRQe24a3xRmW5U2G1rvEWq3fexn6BW9dJc"
 			]
 		}
 	},

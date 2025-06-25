@@ -3,7 +3,11 @@ pragma solidity ^0.8;
 
 contract A{
     uint a;
-    function testa() public view   returns(uint){
+    constructor(uint _a){
+        a = _a;
+    }
+
+    function testa() public view     returns(uint){
         return  a+10;
     }
 
@@ -12,8 +16,8 @@ contract A{
 contract B is A{
     uint b;
 
-    constructor(){
-        b=10;
+     constructor() A(1) {
+        b = 2;
     }
 
     function testb() public view  returns(uint) {
@@ -24,3 +28,6 @@ contract B is A{
 
 
 }
+
+
+

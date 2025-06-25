@@ -4,15 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [],
-				"name": "get",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -26,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"extends02.sol": "B"
+			"extends02.sol": "foo"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -41,11 +33,11 @@
 	},
 	"sources": {
 		"extends02.sol": {
-			"keccak256": "0x768414f7d6b553b79232e4cb97c250fcdb0e8df555f84be51b9488d2b8e0ebd8",
+			"keccak256": "0x8e5304db6cf45323664ccda7cc36d34127b3f0fc92ba51e46f23ac86c1d27480",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://34e650770387d2beeb12fbb034166aa2da649e298db5ba91a9faf7df3c5e8899",
-				"dweb:/ipfs/QmTmkyjQoqN9skGjTTWg7LSt3E8kJx4o2uM737k1EqdcDJ"
+				"bzz-raw://db9b64b34038f8d05356e9d1fbb41d7f23a810eb0f30a4119850af4d9b1a0185",
+				"dweb:/ipfs/Qmb17vRHUJvS8ew8CQhyLhzhFxGnSfpvtt9JsG2oCiGmME"
 			]
 		}
 	},
