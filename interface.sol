@@ -3,7 +3,7 @@ pragma solidity ^0.8;
 
 interface Ibank { 
    function getblance() external view returns (uint256);
-   function deposit() external  payable ;
+   function deposit() external    payable ;
    function withdraw( uint256 _value)external;
 }
 
@@ -12,16 +12,16 @@ interface Ibank {
 contract Bank is Ibank{    
 
    mapping (address => uint256) public balances;
-   function getblance() external view override returns (uint256){
+   function getblance() external view  returns (uint256){
     return balances[msg.sender];
    }
 
-   function deposit() external  payable override{
+   function deposit() external  payable   {
     require(msg.value>0,"deposit amount must great than 0");
     balances[msg.sender]+= msg.value;
    }
 
-   function withdraw( uint256 _value)external override {
+   function withdraw( uint256 _value)external  {
 
         require(_value<=balances[msg.sender], "NO balance");           
         balances[msg.sender]-=_value;
@@ -34,8 +34,8 @@ contract Bank is Ibank{
 contract BankUser{
  
 
- receive() external payable { }
-fallback() external payable { }
+    receive() external payable { }
+    fallback() external payable { }
 
 
     function getUserBlance(address ads) external  view  returns (uint256) {
