@@ -6,15 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "addr",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"stateMutability": "payable",
+				"type": "fallback"
 			},
 			{
 				"inputs": [
@@ -65,6 +58,10 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -80,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"erc20.sol": "BankUser"
+			"interface.sol": "BankUser"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -94,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"erc20.sol": {
-			"keccak256": "0x6c9aafe62a8bc4dcb6bc8e31f9f5c0e153a0394492c99af6d9f2a0465f31ab4d",
+		"interface.sol": {
+			"keccak256": "0xc044bc81b7f707d541cd97e6174af30622deb8f9d6c31ba4260c517c4fae2ecb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0d5e249d2d14f1a0dc2f88f471b40f8ffac458bd0a06a0aabafe948015d40c0e",
-				"dweb:/ipfs/QmPVZ1dtRVS62wtEkhGiGaJbyu72TpQY11hxrstPdGXMn3"
+				"bzz-raw://0da7d680df057784cde36ced4e2504c7f6146628732ad86598dd21b9f99b78c5",
+				"dweb:/ipfs/QmTS4ajh9KAwpvYf5VApD8MdTz3PdjU2mCLQBqjF4caVrf"
 			]
 		}
 	},

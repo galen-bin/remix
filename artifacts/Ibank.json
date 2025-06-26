@@ -51,7 +51,7 @@
 		"methodIdentifiers": {
 			"deposit()": "d0e30db0",
 			"getblance()": "34b467a4",
-			"withdraw(uint256,address)": "00f714ce"
+			"withdraw(uint256)": "2e1a7d4d"
 		}
 	},
 	"abi": [
@@ -81,11 +81,6 @@
 					"internalType": "uint256",
 					"name": "_value",
 					"type": "uint256"
-				},
-				{
-					"internalType": "address",
-					"name": "_to",
-					"type": "address"
 				}
 			],
 			"name": "withdraw",

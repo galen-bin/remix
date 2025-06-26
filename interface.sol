@@ -4,7 +4,7 @@ pragma solidity ^0.8;
 interface Ibank { 
    function getblance() external view returns (uint256);
    function deposit() external  payable ;
-   function withdraw( uint256 _value, address _to )external;
+   function withdraw( uint256 _value)external;
 }
 
 
@@ -21,27 +21,22 @@ contract Bank is Ibank{
     balances[msg.sender]+= msg.value;
    }
 
-   function withdraw( uint256 _value, address   _to )external override{
+   function withdraw( uint256 _value)external override {
 
-    require(_value<balances[_to], "Withdraw amount must be lower than your balance");
-
-       (bool sent,)=payable(_to).call{value: _value}("");
-       if(sent){
-        balances[msg.sender] -=  _value;
-       }else {
-        revert("No Ether Sent");
-       }
+        require(_value<=balances[msg.sender], "NO balance");           
+        balances[msg.sender]-=_value;
+        payable(msg.sender).transfer(_value);
+ 
 
    }
 }
 
 contract BankUser{
-    Bank buser;
+ 
 
-   
-    constructor (address addr){
-        buser=Bank(addr); 
-    }
+ receive() external payable { }
+fallback() external payable { }
+
 
     function getUserBlance(address ads) external  view  returns (uint256) {
          Bank b=Bank(ads);
@@ -50,7 +45,7 @@ contract BankUser{
 
     function User_withdraw_Bank(address ads,uint amount) external payable{
         Bank b=Bank(ads);
-        b.withdraw(amount,ads);
+        b.withdraw(amount);
     }
 
     function deposit_in_bank(address ads) external payable {
