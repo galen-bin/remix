@@ -35,11 +35,16 @@ contract Rome{
          }
 
     //数字转罗马
-    function convert_num(int number)  public view returns (string memory){
-       
+    function convert_num(uint number)  public view returns (string memory){
+        require(number<=3000,"number is error");
+      string[4] memory k=["","M","MM","MMM"];
+      string[10] memory h=["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"];
+      string[10] memory t=["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
+      string[10] memory o=["","I","II","III","IV","V","VI","VII","VIII","IX"];
 
-
-
+    //拼接字符串
+   return  string.concat(k[number%10000/1000],h[number%1000/100],t[number%100/10],o[number%10]);
+      
         
     }
 }
