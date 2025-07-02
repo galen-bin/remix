@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getarr",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"task01/Array.sol": "Array"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"task01/Array.sol": {
+			"keccak256": "0xb8358e3efb7a929f1bf3091c76d66cfad7ae65b4b07662d2c385380e73b13862",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://350823796a69e80a33ccc4bd6f42113227ec8e385bf9a3826ff8bdc3bdc42b0c",
+				"dweb:/ipfs/QmXB94rgCLXqubdCECqBvcjDmT9BNuFmtabueyYrcTX1r8"
+			]
+		}
+	},
+	"version": 1
+}
