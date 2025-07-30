@@ -1,0 +1,182 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "NextAciontId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "aciton",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "stratime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keeptime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isend",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "statpirce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxprice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "maxaddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "TokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "Tokenaddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "nftaddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_statpirce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keeptime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_TokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_nftaddress",
+						"type": "address"
+					}
+				],
+				"name": "createAciton",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "joinAciton",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"task03/NftAction.sol": "NftAction"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"task03/NftAction.sol": {
+			"keccak256": "0x79d1b2e52c342fd3de5fa3ecc42fd7555d39992577a271b5771e46beb7e06e49",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://98929517cf97852a8524328f81a3c4b8aa9e921f40e5cb535c90998f25c476d1",
+				"dweb:/ipfs/QmRuodhybfTu5Cr2HkQQtmV5Va8Zxaa9kjFSJoq56V8wWZ"
+			]
+		}
+	},
+	"version": 1
+}
