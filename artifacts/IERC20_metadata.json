@@ -132,7 +132,7 @@
 						"type": "uint8"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -145,7 +145,7 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -158,7 +158,7 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -241,7 +241,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"task02/ierc20.sol": "IERC20"
+			"mytoken.sol": "IERC20"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -255,12 +255,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"task02/ierc20.sol": {
-			"keccak256": "0xacafb57bf9260e1183c35d12e6ba6f518e84c96a44a2bc3886174188c2306988",
+		"mytoken.sol": {
+			"keccak256": "0x0d46dbb421cb1d48233aace249a0c6f4f62e7baf5e717e9bce86dc0438defc71",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://382df3b37e3e43c912b9015d9cbba05970ea94d38bf60b790bbd70063a734dd5",
-				"dweb:/ipfs/QmWjMuBcAcUAfasYfwEyj1YhwcooVZaqxjNUrWPsqyPCXq"
+				"bzz-raw://db1ca87bb3434325119ac7b003bac357d12d58bb028f5431871162fad6e5d4b8",
+				"dweb:/ipfs/QmYQk8uUJQG8QaG1eQsTQtQzYGW4jY1GoZtkVsdYV38bNt"
 			]
 		}
 	},

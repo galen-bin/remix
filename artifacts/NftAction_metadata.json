@@ -136,6 +136,19 @@
 						"type": "uint256"
 					}
 				],
+				"name": "endAciton",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
 				"name": "joinAciton",
 				"outputs": [],
 				"stateMutability": "payable",
@@ -170,11 +183,11 @@
 	},
 	"sources": {
 		"task03/NftAction.sol": {
-			"keccak256": "0x79d1b2e52c342fd3de5fa3ecc42fd7555d39992577a271b5771e46beb7e06e49",
+			"keccak256": "0xf34d481f42b71afd2c4dbe802cc6f1e07ab1f7bbcbc2d0000eb1efb8abd8b7d6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://98929517cf97852a8524328f81a3c4b8aa9e921f40e5cb535c90998f25c476d1",
-				"dweb:/ipfs/QmRuodhybfTu5Cr2HkQQtmV5Va8Zxaa9kjFSJoq56V8wWZ"
+				"bzz-raw://45118a143a903c3e0b71bf0fbf0ba4546e82fbcdbd1b0b65b5bd7f1cb1f7d617",
+				"dweb:/ipfs/QmRrqcFmRbyNUJbCwAXTdoq9bfNpTJ5v89KWt8PJQhkcVW"
 			]
 		}
 	},

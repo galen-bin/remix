@@ -83,9 +83,14 @@ contract NftAction{
 
         NftInfo storage acinfo=aciton[_id];
         acinfo.maxprice=msg.value;
-  
-
-
+        acinfo.maxaddress=msg.sender;        
+    }
+    //结束拍卖
+     function  endAciton(uint256 _id)public{
+        require(block.timestamp>aciton[_id].stratime+aciton[_id].keeptime,"Aciton is not end");
+        require(aciton[_id].isend==false,"Aciton is end");
+         NftInfo storage acinfo=aciton[_id];
+         
     }
 
 
