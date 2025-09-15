@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -64,12 +59,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_owner",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -77,7 +72,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "remaining",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -88,12 +83,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -101,7 +96,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -112,7 +107,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_owner",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -120,7 +115,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "balance",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -141,25 +136,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "key",
-						"type": "string"
-					}
-				],
-				"name": "getitem",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -170,24 +146,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "key",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "val",
-						"type": "uint256"
-					}
-				],
-				"name": "setitem",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -220,12 +178,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -233,7 +191,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -244,17 +202,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_from",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -262,7 +220,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -271,8 +229,45 @@
 			}
 		],
 		"devdoc": {
+			"details": "Interface for the optional metadata functions from the ERC-20 standard.",
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				}
+			},
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"allowance(address,address)": {
+					"details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+				},
+				"approve(address,uint256)": {
+					"details": "Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"balanceOf(address)": {
+					"details": "Returns the value of tokens owned by `account`."
+				},
+				"decimals()": {
+					"details": "Returns the decimals places of the token."
+				},
+				"name()": {
+					"details": "Returns the name of the token."
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token."
+				},
+				"totalSupply()": {
+					"details": "Returns the value of tokens in existence."
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves a `value` amount of tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism. `value` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -283,7 +278,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"mytoken.sol": "BaseERC20"
+			"erc20/IERC20Metadata.sol": "IERC20Metadata"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -297,12 +292,18 @@
 		"remappings": []
 	},
 	"sources": {
-		"mytoken.sol": {
-			"keccak256": "0x144c05aa641c4dd408ea2caf349fa3fada321437d92cc002339abf5194c74b05",
-			"license": "MIT",
+		"erc20/IERC20.sol": {
+			"keccak256": "0xd4745ebe017792eaa0d12fea2211863d710be56c432dbe286aa1686b17308546",
 			"urls": [
-				"bzz-raw://00bb958dc7261a77c21b21a140141b5ba7b1c898f780b129e38447fa82433c10",
-				"dweb:/ipfs/QmeJCCRZPrhAfqhEMwk53Vy2HqY33JjzCWfRkRc6mnCWoo"
+				"bzz-raw://89b9892384a27a0901ad11234f27d7a884e878cc259c2f7cec192b205047b4ad",
+				"dweb:/ipfs/QmTDW9wUvb22KNEwosiZjYzyo1WjVc96RzAfp1QhminHiV"
+			]
+		},
+		"erc20/IERC20Metadata.sol": {
+			"keccak256": "0x592cf1ea489b6399e5174307e23ae90a147d450993923a472f0d8c185dc0144d",
+			"urls": [
+				"bzz-raw://43bcb3f9bcd526b3c319c6d45782c58846b0dfe20a69c9da7228afb3dcf7c479",
+				"dweb:/ipfs/QmTQePy9pHRGYgJuehBgQXRafUh3oxotGfKS6ss3vNvRKF"
 			]
 		}
 	},

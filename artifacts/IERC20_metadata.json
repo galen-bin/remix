@@ -88,7 +88,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -124,45 +124,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "decimals",
-				"outputs": [
-					{
-						"internalType": "uint8",
-						"name": "decimals",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "symbol",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "totalSupply",
 				"outputs": [
 					{
@@ -183,7 +144,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -212,7 +173,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -229,8 +190,36 @@
 			}
 		],
 		"devdoc": {
+			"details": "Interface of the ERC-20 standard as defined in the ERC.",
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				}
+			},
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"allowance(address,address)": {
+					"details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+				},
+				"approve(address,uint256)": {
+					"details": "Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"balanceOf(address)": {
+					"details": "Returns the value of tokens owned by `account`."
+				},
+				"totalSupply()": {
+					"details": "Returns the value of tokens in existence."
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves a `value` amount of tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism. `value` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -241,7 +230,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"mytoken.sol": "IERC20"
+			"erc20/IERC20.sol": "IERC20"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -255,12 +244,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"mytoken.sol": {
-			"keccak256": "0x0d46dbb421cb1d48233aace249a0c6f4f62e7baf5e717e9bce86dc0438defc71",
-			"license": "MIT",
+		"erc20/IERC20.sol": {
+			"keccak256": "0xd4745ebe017792eaa0d12fea2211863d710be56c432dbe286aa1686b17308546",
 			"urls": [
-				"bzz-raw://db1ca87bb3434325119ac7b003bac357d12d58bb028f5431871162fad6e5d4b8",
-				"dweb:/ipfs/QmYQk8uUJQG8QaG1eQsTQtQzYGW4jY1GoZtkVsdYV38bNt"
+				"bzz-raw://89b9892384a27a0901ad11234f27d7a884e878cc259c2f7cec192b205047b4ad",
+				"dweb:/ipfs/QmTDW9wUvb22KNEwosiZjYzyo1WjVc96RzAfp1QhminHiV"
 			]
 		}
 	},

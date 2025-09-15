@@ -12,6 +12,9 @@ contract BaseERC20 {
 
     mapping (address => mapping (address => uint256)) allowances; 
 
+    mapping (address => mapping (string => uint256)) item; 
+    
+
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
@@ -60,4 +63,16 @@ contract BaseERC20 {
     function allowance(address _owner, address _spender) public view returns (uint256 remaining) {
         return allowances[_owner][_spender];
     }
+
+    function setitem(string memory key,uint256 val) external  {
+    
+            item[msg.sender][key]=val;
+     
+    }
+
+    function getitem(string memory key)public view returns(uint256){
+        return item[msg.sender][key];
+    }
+  
+    
 }
