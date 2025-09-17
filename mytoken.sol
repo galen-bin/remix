@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8;
+pragma solidity ^0.6;
 
 contract BaseERC20 {
     string public name; 
@@ -12,13 +12,13 @@ contract BaseERC20 {
 
     mapping (address => mapping (address => uint256)) allowances; 
 
-    mapping (address => mapping (string => uint256)) item; 
+    mapping (address => mapping (string => uint256)) public  item; 
     
 
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
-    constructor() {
+    constructor() public {
         name = "MyToken"; 
         symbol = "MTK"; 
         decimals = 18; 
